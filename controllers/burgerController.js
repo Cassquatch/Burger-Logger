@@ -7,9 +7,9 @@ module.exports = function(app){
 
     //gets existing burgers to be eaten
     app.get("/", (req, res) => {
-        Burger.findAll({})
+        Burger.findAll({raw: true})
         .then(data => {
-            console.log(data);
+            console.log("this is from controller: " + JSON.stringify(data));
             res.render("index", {burgers: data});
         })
         .catch(err => console.log(err));
@@ -25,6 +25,7 @@ module.exports = function(app){
         
         Burger.create({
             burger_name: req.body.burger_name,
+            devoured: 0
             
         })
             .then(data => {

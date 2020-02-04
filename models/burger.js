@@ -4,9 +4,11 @@ const db = require("../config/connection.js");
 
 const Burger = db.define("burger", {
     burger_name: Sequelize.STRING,
-    devoured: Sequelize.BOOLEAN
+    devoured: {
+        type: Sequelize.BOOLEAN,
+        default: 0
+    }
 });
-
-// Burger.sync();
+ Burger.sync();
 
 module.exports = Burger;
