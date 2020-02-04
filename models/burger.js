@@ -1,12 +1,12 @@
 const Sequelize = require("sequelize");
 
-const sequelize = require("../config/connection.js");
+const db = require("../config/connection.js");
 
-const Burger = sequelize.define("burger", {
+const Burger = db.define("burger", {
     burger_name: Sequelize.STRING,
     devoured: Sequelize.BOOLEAN
 });
 
-Burger.sync();
+// Burger.sync();
 
 module.exports = Burger;
