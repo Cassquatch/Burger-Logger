@@ -9,7 +9,6 @@ module.exports = function(app){
     app.get("/", (req, res) => {
         Burger.findAll({raw: true})
         .then(data => {
-            console.log("this is from controller: " + JSON.stringify(data));
             res.render("index", {burgers: data});
         })
         .catch(err => console.log(err));
