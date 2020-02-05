@@ -11,8 +11,8 @@ header {
 }
 
 .burgers-to-eat{
-    display: flex;
-    background-color: white;
+    margin-left: 20%;
+    list-style-type: none;
     width: 300px;
     
 }
@@ -44,4 +44,10 @@ header {
     justify-content: center;
     margin: 0 auto;
     text-align: center;
+}
+
+.devoured-burgers {
+    margin-left: 60%;
+    list-style-type: none;
+    width: 300px;
 }

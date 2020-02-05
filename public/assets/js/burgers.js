@@ -32,9 +32,19 @@ $(".devour").on("click", (event) => {
         data: isDevoured
     }).then(() => {
         console.log("updated burger to devoured");
-        // location.reload();
+        location.reload();
     });
-})
+});
+
+$(".delete-burger").on("click", (event) => {
+    let id = $(event.target).data("id");
+
+    $.ajax(`/api/burgers/${id}`, {
+        type: "DELETE"
+    }).then( () => {
+        location.reload();
+    });
+});
 
 
 

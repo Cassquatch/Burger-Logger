@@ -6,9 +6,9 @@
     <h4 class="eat-da-burger">Eat Da Burger!</h4>
 </div>
    
-        <div class="burgers-to-eat">
-            <h4>Burgers to Eat!</h4>
-                <ul>
+        
+            
+                <ul class="burgers-to-eat">
 
                     {{#each burgers}}
                         {{#unless devoured}}
@@ -17,7 +17,18 @@
                         {{/unless}}
                     {{/each}}
                 </ul>
-        </div>
+
+                
+                <ul class="devoured-burgers">
+
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            <li>Burger Name: {{burger_name}}</li>
+                            <button class="delete-burger" data-id={{id}}>Delete</button>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+    
         
                 <form class="create-form">
                     <div class="form-group">

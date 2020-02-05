@@ -41,14 +41,29 @@ module.exports = function(app){
             where: {
                 id: req.params.id
             },
-            raw: true
-        }).then((result) => {
+
+                
             
+        }).then((result) => {
+            console.log(result);
             result.update({
                 devoured: req.body.devoured
             });
             res.status(200).end();
         });
     });
+
+    app.delete("/api/burgers/:id", (req, res) => {
+        
+        db.Burger.destroy({
+          where: {
+            id: req.params.id
+          }
+        }).then(() => {
+         
+          res.end();
+        });
+      });
+    
 }
 
