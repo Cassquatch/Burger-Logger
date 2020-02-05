@@ -1,0 +1,47 @@
+header {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    
+}
+
+#header-img {
+    height: 200px;
+    width: 100%;
+}
+
+.burgers-to-eat{
+    display: flex;
+    background-color: white;
+    width: 300px;
+    
+}
+
+
+.eat-da-burger{
+    text-align: center;
+    justify-content: center;
+}
+
+.add-burger-div{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+.create-form, .add-burger, .words{
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}

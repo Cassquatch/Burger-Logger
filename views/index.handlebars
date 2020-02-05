@@ -1,20 +1,32 @@
+<header>
+    <img id="header-img" src="assets\images\BB_background.jpg">
+</header>
 
-<ul>
-    
-{{#each burgers}}
-    {{#unless devoured}}
-    <li>Burger Name: {{burger_name}}</li>
-    {{/unless}}
-{{/each}}
-</ul>
+<div class="headline">
+    <h4 class="eat-da-burger">Eat Da Burger!</h4>
+</div>
+   
+        <div class="burgers-to-eat">
+            <h4>Burgers to Eat!</h4>
+                <ul>
 
-<h2>Add a burger!</h2>
-<form class="create-form">
-    <div class="form-group">
-        <label for="burger">Want another burger?</label>
-        <textarea  type="text" id="burger" name="burger_name">
-    </textarea>
-    </div>
-</form>
-<button class="add-burger" type="click">Add a Burger!</button>
-
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                            <li>Burger Name: {{burger_name}}</li>
+                            <button class="devour">Eat me!</button>
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+        </div>
+        
+                <form class="create-form">
+                    <div class="form-group">
+                        <label for="burger"></label>
+                        <textarea type="text" id="burger" name="burger_name">
+                        </textarea>
+                    </div>
+              
+                </form>
+                    <button class="add-burger" type="click">Add a Burger!</button>
+                    <h2 class="words">Add a burger!</h2>
+        

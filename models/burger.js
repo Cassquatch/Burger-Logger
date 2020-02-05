@@ -6,7 +6,7 @@ const Burger = db.define("burger", {
     burger_name: Sequelize.STRING,
     devoured: {
         type: Sequelize.BOOLEAN,
-        default: 0
+        defaultValue : 0
     }
 });
  Burger.sync();

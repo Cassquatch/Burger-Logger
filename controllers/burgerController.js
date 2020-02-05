@@ -24,9 +24,7 @@ module.exports = function(app){
         console.log(req.body);
         
         Burger.create({
-            burger_name: req.body.burger_name,
-            devoured: 0
-            
+            burger_name: req.body.burger_name
         })
             .then(data => {
                 res.json({id: data.id});
