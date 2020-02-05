@@ -1,6 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-const routes = require("./controllers/burgerController.js");
+
 const db = require("./models");
 
 //dynamic port for hosting, default port for local use

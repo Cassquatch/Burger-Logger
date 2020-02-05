@@ -9,6 +9,7 @@ module.exports = function(app){
     app.get("/", (req, res) => {
         db.Burger.findAll({raw: true})
         .then(data => {
+            
             res.render("index", {burgers: data});
         })
         .catch(err => console.log(err));
@@ -32,6 +33,22 @@ module.exports = function(app){
             .catch(err => console.log(err));
     
        
+    });
+
+    app.put("/api/burgers/:id", (req, res) => {
+        console.log(req.params.id);
+        db.Burger.findOne({
+            where: {
+                id: req.params.id
+            },
+            raw: true
+        }).then((result) => {
+            
+            result.update({
+                devoured: req.body.devoured
+            });
+            res.status(200).end();
+        });
     });
 }
 

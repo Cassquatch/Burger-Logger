@@ -18,5 +18,23 @@ $(".add-burger").on("click", (event) => {
     });
 });
 
+$(".devour").on("click", (event) => {
+    let id = $(event.target).data("id");
+    console.log(id);
+    
+    
+
+    let isDevoured = {
+        devoured: true
+    }
+    $.ajax(`/api/burgers/${id}`, {
+        type: "PUT",
+        data: isDevoured
+    }).then(() => {
+        console.log("updated burger to devoured");
+        // location.reload();
+    });
+})
+
 
 
