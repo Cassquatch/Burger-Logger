@@ -1,7 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers/burgerController.js");
-const db = require("./config/connection.js");
+const db = require("./models");
 
 //dynamic port for hosting, default port for local use
 const PORT = process.env.PORT || 8080;
@@ -20,16 +20,15 @@ app.use(express.json());
 app.use(express.static("public"));
 //set up the routes to the server
 // app.use(routes);
-require("./controllers/burgerController.js")(app);
+require("./routes/api-routes.js")(app);
 
 
-db.authenticate()
-    .then(() => console.log(`Database connected..`))
-    .catch(err => console.log("err: " + err));
 
 
-app.listen(PORT, function() {
-    //show where the server is listening
-    console.log("Server listening on: http://localhost:" + PORT);
+
+
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+        console.log("Server listening on: http://localhost:" + PORT);
+    });
   });
-  
