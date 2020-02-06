@@ -4,7 +4,7 @@
     "password": "mrmeseekslookatme101!",
     "database": "burgers_db",
     "host": "127.0.0.1",
-    "dialect": "mysql",
+    "dialect": "mysql"
     
   },
   "test": {
@@ -12,7 +12,7 @@
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql",
+    "dialect": "mysql"
     
   },
   "production": {
@@ -21,7 +21,7 @@
     "database": "wfgdy9nawsc3rspb",
     "host": "wm63be5w8m7gs25a.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
-    "dialect": "mysql",
+    "dialect": "mysql"
     
   }
 }

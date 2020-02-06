@@ -17,7 +17,7 @@ When the user runs the app, you create burgers through entering it into the text
 If you clone this repo, and want to run this locally, go into the config folder, and in config.json, for "development" add your credentials in there, make sure you have created the database and allowed your user permissions, then run the app with node server.
 
 # Link to Deployed Application
-
+https://dashboard.heroku.com/apps/safe-sands-79519
 
 # Author
 Cassidy Fortner
